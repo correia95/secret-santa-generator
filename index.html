@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#b91c1c" />
+
+    <title>Secret Santa Generator — pairings with exclusions, revealed privately</title>
+    <meta
+      name="description"
+      content="Generate Secret Santa pairings from a list of names, with optional exclusion pairs for people who shouldn't draw each other, revealed one person at a time. Free, private, runs entirely in your browser."
+    />
+    <link rel="canonical" href="https://secret-santa-generator.correia95.workers.dev/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Secret Santa Generator" />
+    <meta property="og:description" content="Generate Secret Santa pairings with exclusions, revealed one person at a time. Free, in your browser." />
+    <meta property="og:url" content="https://secret-santa-generator.correia95.workers.dev/" />
+    <meta property="og:image" content="https://secret-santa-generator.correia95.workers.dev/og.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Secret Santa Generator" />
+    <meta name="twitter:description" content="Generate Secret Santa pairings with exclusions, revealed one person at a time. Free, in your browser." />
+    <meta name="twitter:image" content="https://secret-santa-generator.correia95.workers.dev/og.svg" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Secret Santa Generator",
+        "url": "https://secret-santa-generator.correia95.workers.dev/",
+        "applicationCategory": "LifestyleApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "description": "Generates Secret Santa gift-exchange pairings (a random derangement with no self-matches) from a list of names, supporting exclusion pairs such as couples who shouldn't draw each other, revealed one person at a time on the same device."
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does this send anything to participants automatically?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No - nothing is emailed or messaged. You reveal each person's match on this page and tell them yourself, however you'd like."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What if my exclusions make a draw impossible?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "With too many exclusions relative to the group size, no valid arrangement may exist - you'll see a message asking you to remove one or add more participants."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is my list stored anywhere?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Only in this browser and, if you copy it, the organizer link's URL. Nothing is uploaded to a server."
+            }
+          }
+        ]
+      }
+    </script>
+    <style>
+      .tt-nav { box-sizing: border-box; width: 100%; margin: 0; background: #f1f1f4; border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+      .tt-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; text-decoration: none; color: #3730a3; font: 600 13px/1 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+      .tt-nav a:hover { color: #1e1b4b; text-decoration: underline; }
+      .tt-nav svg { width: 14px; height: 14px; flex: none; }
+      @media (prefers-color-scheme: dark) {
+        .tt-nav { background: #15151b; border-bottom-color: rgba(255, 255, 255, 0.12); }
+        .tt-nav a { color: #c7d2fe; }
+        .tt-nav a:hover { color: #e0e7ff; }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="tt-nav"><a href="https://tinytools.correia95.workers.dev/" aria-label="TinyTools home — all tools and games"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 2 11h3v9h5v-6h4v6h5v-9h3z"/></svg><span>TinyTools</span></a></nav>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <noscript>
+      <p style="text-align: center; padding: 20px">
+        This Secret Santa generator needs JavaScript to run in your browser.
+      </p>
+    </noscript>
+  </body>
+</html>

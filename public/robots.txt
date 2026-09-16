@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://secret-santa-generator.correia95.workers.dev/sitemap.xml
