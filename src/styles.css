@@ -93,3 +93,8 @@ h1 { font-size: clamp(1.4rem, 4.2vw, 1.9rem); margin: 0 0 6px; letter-spacing: -
 .explainer h2 { font-size: 1.1rem; margin: 18px 0 8px; }
 .explainer h3 { font-size: 0.96rem; margin: 16px 0 6px; }
 .explainer p { color: var(--ink-soft); font-size: 0.9rem; }
+
+/* a11y-contrast-fixes (auto, WCAG AA 4.5:1) */
+@media (prefers-color-scheme: light) {
+  .primary-btn { color: #ffffff; }
+}
